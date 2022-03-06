@@ -6,7 +6,8 @@ module.exports = class RunCommand extends AbstractCommand {
   load(program) {
     program
       .command("run")
-      .argument("[mode]", "运行环境")
+      .argument("[mode]", "运行环境", "dev")
+      .argument("[install...]", "运行环境", [])
       .option(
         "-c,--conifg [config]",
         "指定运行的webpac配置文件,相对于当前工作目录"
@@ -15,9 +16,9 @@ module.exports = class RunCommand extends AbstractCommand {
       // .option('-m,--mode [mode]', '运行环境', 'none')
       .option("-p,--port <port>", "端口", 8080)
       .option("-e,--env [env]", "环境参数")
-      .action((mode, options, command) => {
+      .action((mode, install, options, command) => {
         this.action.handler(mode, program.opts());
-        console.log("run data:", program.opts(), options, mode);
+        console.log("run data:", program.opts(), options, install, mode);
         console.log("env:", utils.parseJson(options.env));
       });
   }
