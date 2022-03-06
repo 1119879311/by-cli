@@ -1,0 +1,29 @@
+{
+  "name": "@by-cli/cli",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "1119879311 <1119879311@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "bin/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "bin": {
+    "by-cli": "bin/index.js"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npm.taobao.org"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@by-cli/utils": "^1.0.0",
+    "commander": "^9.0.0"
+  }
+}
