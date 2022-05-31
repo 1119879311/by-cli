@@ -23,8 +23,9 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@by-cli/utils": "^1.0.0",
+    "@by-cli/utils": "1.0.0",
     "commander": "8.3.0",
-    "cross-spawn": "^7.0.3"
+    "cross-spawn": "^7.0.3",
+    "ora": "^4.1.0"
   }
 }
